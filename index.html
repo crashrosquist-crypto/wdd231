@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documenttttrtgdfgsasdadadf</title>
+    <title>Quist Chamber Of Commerce</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" type="image/svg+xml" href="images/cheese.svg" width="1" height="1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/cheese.js" defer></script>
 </head>
+
 <body>
-    
+    <header>
+        <img src="images/cheese.svg" alt="site logo" width="1" height="1">
+        <span>Chamber Of Commerce</span>
+        <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li class="current"><a href="#">Home</a></li>
+                <li><a href="#">Chamber Project</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="home-container">
+            <section class="about-text">
+                <h2>Home</h2>
+                <h3 class="section-title">About Me</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil enim debitis quaerat rerum minus in eveniet unde? Odit magnam perferendis debitis quibusdam necessitatibus. Aut at neque pariatur saepe qui dolore, nam voluptatum assumenda quibusdam ut inventore magni incidunt eius. Quidem exercitationem consectetur ipsum, architecto delectus velit nesciunt aspernatur facilis? Beatae!</p>
+            </section>
+
+            <figure class="profile-photo">
+                <h3 class="section-title">My Profile</h3><img src="images/profile.jpg" alt="Student Photo">
+            </figure> 
+        </div>
+
+        <h2 class="course-heading">Web and Computer Programming Certificate</h2>
+
+        <div class="filters">
+            <button id="all">All</button>
+            <button id="cse">CSE</button>
+            <button id="wdd">WDD</button>
+        </div>
+
+        <div id="course-list-container">   
+            </div>
+            
+            <p id="total-credits"></p>
+
+    </main>
+
+    <footer>
+
+    </footer>
 </body>
+
 </html>

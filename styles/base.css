@@ -1,0 +1,164 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  text-transform: 1.6;
+  color: #333;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 24px auto 44px;
+  align-items: center;
+  column-gap: 1rem;
+  padding: 10px;
+  background-color: #eee;
+}
+
+
+header img {
+  width: 24px;
+  height: auto;
+  justify-self: center;
+  align-self: center;
+}
+
+.hamburger {
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.hamburger::before {
+  content: "\2630";
+}
+
+.hamburger.show::before {
+  content: "\00D7";
+}
+
+.navigation {
+  display: none;
+  grid-column: 1/4;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation.show {
+  display: block;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  justify-content: space-around;
+}
+
+.navigation li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.home-container {
+  display: block;
+  padding: 20px;
+}
+
+.home-container img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.home-container p {
+  display: flex;
+  
+}
+
+.section-title {
+  background-color: black;
+  color: #ffffff;
+  padding: 0.5rem;
+  margin-bottom: 0;
+  text-align: center;
+  
+}
+
+.profile-photo {
+  margin-top: 3rem;
+}
+
+.about-text p {
+  background-color: gray;
+  
+  margin: 0;
+}
+
+#course-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.course-card {
+  background-color: #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  min-width: 120px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.completed {
+  background-color: #4c5c68;
+  color: white;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  margin: 20px 0;
+  margin-bottom: 2rem;
+}
+
+.course-heading {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.filters button {
+  padding: 10px 25px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filters button:hover {
+  background-color: #4c5c68;
+  color: white;
+}
+
+#total-credits {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 30px 0;
+    color: #2c3e50;
+    border-radius: 8px;
+    border-left: 5px solid #4c5c68;
+    border-right: 5px solid #4c5c68;
+}
