@@ -161,3 +161,7 @@ header img {
     border-left: 5px solid #4c5c68;
     border-right: 5px solid #4c5c68;
 }
+
+p {
+  color: #000000;
+}
