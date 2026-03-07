@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is the home page for my student Chamber of Commerce website. This is the landing page.">
+    <meta name="description"
+        content="This is the home page for my student Chamber of Commerce website. This is the landing page.">
     <meta name="author" content="Crash Rosquist">
     <title>Quist Chamber Of Commerce</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <link rel="icon" type="image/svg+xml" href="images/cheese.svg" width="1" height="1">
+    <link rel="icon" type="image/svg+xml" href="images/cheese.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -47,19 +48,19 @@
                 <h3 class="section-title">My Profile</h3><img src="images/profile.jpg" alt="Student Photo">
             </figure>
         </section>
+        <section class="courses">
+            <h2 class="course-heading">Web and Computer Programming Certificate</h2>
 
-        <h2 class="course-heading">Web and Computer Programming Certificate</h2>
+            <div class="filters">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
 
-        <section class="filters">
-            <button id="all">All</button>
-            <button id="cse">CSE</button>
-            <button id="wdd">WDD</button>
+            <div id="course-list-container"></div>
+
+            <p id="total-credits"></p>
         </section>
-
-        <div id="course-list-container">
-        </div>
-
-        <p id="total-credits"></p>
 
     </main>
 
