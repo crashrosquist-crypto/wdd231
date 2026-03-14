@@ -215,6 +215,11 @@ p {
   display: block;
 }
 
+#grid, #list {
+  margin: 10px;
+  padding: 10px 20px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
