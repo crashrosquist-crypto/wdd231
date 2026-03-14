@@ -31,9 +31,11 @@ header {
 
 header img {
   width: 24px;
-  height: auto;
+  height: 24px;
   justify-self: center;
   align-self: center;
+  object-fit: contain;
+
 }
 
 .hamburger {
@@ -200,4 +202,96 @@ p {
   border-radius: 5px;
   font-weight: bold;
   color: #333;
+}
+
+#members-container {
+  margin: 1rem auto;
+  padding: 0.5rem;
+}
+
+#member-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.grid section {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.grid img {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 17 / 10;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  background-color: #f0f0f0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list section {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: block;
+  text-align: left;
+}
+
+.list section img {
+  display: none;
+}
+
+.list section h3 {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.list section p {
+  margin: 2px 0;
+  font-size: 0.9rem;
+}
+
+.navigation a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.5rem;
+}
+
+.navigation a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.menu-controls {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.menu-controls button {
+  padding: 12px 24px;
+  margin: 0 10px;
+  cursor: pointer;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }

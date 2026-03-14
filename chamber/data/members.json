@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Quist Gaming Center",
+        "address": "1718 Lillow St, Quist City",
+        "phone": "(208) 456-1770",
+        "website": "#",
+        "image": "quist-gaming.webp",
+        "membershipLevel": 3,
+        "otherInfo": "The best place to experience Quist city gaming."
+    },
+    {
+        "name": "Wasabi Wares",
+        "address": "1718 Wasabi Junction",
+        "phone": "(208) 456-1770",
+        "website": "https://rollingwasabi.example.com",
+        "image": "quist-sushi.webp",
+        "membershipLevel": 3,
+        "otherInfo": "Quist Level Sushi to get a taste of the city."
+    },
+    {
+        "name": "Mount Fuji Hike",
+        "address": "1718 Sakura Summit Way",
+        "phone": "(208) 456-1770",
+        "website": "#",
+        "image": "quist-fuji-hike.webp",
+        "membershipLevel": 3,
+        "otherInfo": "Experience the Beauty of Mount Fuji in Quist City?"
+    },
+    {
+        "name": "Quist Bullet Junction",
+        "address": "1718 Neon Rail Blvd",
+        "phone": "(208) 456-1770",
+        "website": "#",
+        "image": "quist-bullet-train.webp",
+        "membershipLevel": 3,
+        "otherInfo": "Get where you need to go fast in Quist City with state of the art bullet trains."
+    },
+    {
+        "name": "Manga Moon Mansion",
+        "address": "1718 Shonen Street",
+        "phone": "(208) 456-1770",
+        "website": "#",
+        "image": "quist-manga.webp",
+        "membershipLevel": 3,
+        "otherInfo": "Never be bored with the largest selection of Quist City Manga."
+    },
+    {
+        "name": "Quist Japanese Cinemas",
+        "address": "1718 Cinema Zen Plaza",
+        "phone": "(208) 456-1770",
+        "website": "#",
+        "image": "quist-movie-plaza.webp",
+        "membershipLevel": 3,
+        "otherInfo": "Never miss the latest in Cinematic history at the Movie Plaza."
+    },
+    {
+        "name": "Koi Joi",
+        "address": "1718 Koi Garden Lane",
+        "phone": "(208) 456-1770",
+        "website": "#",
+        "image": "quist-koi-ponds.webp",
+        "membershipLevel": 3,
+        "otherInfo": "Acheive your personal level of Zen with your own Koi fish pond."
+    }
+    
+]

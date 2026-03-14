@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Directory page for Quist City. Where you can connect with local businesses through the official Website.">
+    <meta name="author" content="Crash Rosquist">
+    <title>Directory | Quist Chamber of Commerce</title>
+    
+    <link rel="icon" href="images/favicon.ico">
+    
+    <meta property="og:title" content="Quist Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://your-github-username.github.io/wdd231/chamber/images/share-image.jpg">
+    <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description" content="Explore local businesses in Quist City through our official Chamber Directory.">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/directory.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <img src="images/cheese.svg" alt="Quist Chamber Logo" width="24" height="24">
+        <h1>Quist Chamber Of Commerce</h1>
+        <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li class="current"><a href="/index.html">Home</a></li>
+                <li><a href="chamber/directory.html" class="active">Directory</a></li>
+                <li><a href="#">Final Project</a></li>
+                <li><a href="#">Random</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Business Directory</h2>
+
+        <div class="menu-controls">
+            <button id="grid" aria-label="grid view">Grid View</button>
+            <button id="list" aria-label="list view">List View</button>
+        </div>
+
+        <article id="members-container" class="grid"></article>        
+
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>Quist Chamber of Commerce</p>
+            <p>1718 Lillow St, Quist City</p>
+            <p>information@quistchamber.org | (208) 456-1770</p>
+        </div>
+        <hr>
+        <p>
+            &copy; <span id="currentYear"></span> | Crash Rosquist | WDD 231
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
