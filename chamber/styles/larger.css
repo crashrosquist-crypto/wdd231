@@ -41,6 +41,10 @@
         align-items: center;
     }
 
+    .spotlight-cards {
+        grid-template-columns: repeat(3,1fr);
+    }
+
     
 }
 

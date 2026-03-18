@@ -5,7 +5,7 @@
         "phone": "(208) 456-1770",
         "website": "#",
         "image": "quist-gaming.webp",
-        "membershipLevel": 3,
+        "membershipLevel": 2,
         "otherInfo": "The best place to experience Quist city gaming."
     },
     {
@@ -32,7 +32,7 @@
         "phone": "(208) 456-1770",
         "website": "#",
         "image": "quist-bullet-train.webp",
-        "membershipLevel": 3,
+        "membershipLevel": 2,
         "otherInfo": "Get where you need to go fast in Quist City with state of the art bullet trains."
     },
     {
@@ -41,7 +41,7 @@
         "phone": "(208) 456-1770",
         "website": "#",
         "image": "quist-manga.webp",
-        "membershipLevel": 3,
+        "membershipLevel": 2,
         "otherInfo": "Never be bored with the largest selection of Quist City Manga."
     },
     {
@@ -50,7 +50,7 @@
         "phone": "(208) 456-1770",
         "website": "#",
         "image": "quist-movie-plaza.webp",
-        "membershipLevel": 3,
+        "membershipLevel": 2,
         "otherInfo": "Never miss the latest in Cinematic history at the Movie Plaza."
     },
     {

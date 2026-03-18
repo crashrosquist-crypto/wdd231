@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The home page for Quist Chamber of Commerce, featuring local weather, events, and business spotlights.">
+    <meta name="author" content="Crash Rosquist">
+    <title>Home | Quist Chamber Of Commerce</title>
+
+    <meta property="og:title" content="Quist Chamber Of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Welcome to the Quist Chamber of Commerce. Explore our community, weather, and local businesses.">
+    <meta property="og:image" content="https://crashrosquist-crypto.github.io/wdd231/chamber/images/hero.jpg">
+    <meta property="og:url" content="https://crashrosquist-crypto.github.io/wdd231/chamber/index.html">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src="scripts/main.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/cheese.svg" alt="Quist Chamber Logo">
+        <h1>Quist Chamber Of Commerce</h1>
+        <button id="nav-button" class="hamburger" aria-label="Toggle Navigation"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Beautiful Cherry Blossoms in Quist City">
+            <div class="hero-label">
+                <h1>Welcome To Quist</h1>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <section id="weather">
+            <h2>Weather</h2>
+            <div class="weather-info">
+                <p>Location: <strong>Quist</strong></p>
+                <p>Temperature: <span id="current-temp"></span></p>
+                <p>Condition: <span id="weather-description">Loading...</span></p>
+                <hr>
+                <h3>3-Day Forecast</h3>
+                <ul id="forecast-list">
+                    </ul>
+            </div>
+        </section>
+
+        <section id="events">
+            <h2>Current Events</h2>
+            <div class="event-card">
+                <p><strong>Quist Cheese Festival:</strong> Coming this Fall!</p>
+                <p><strong>Monthly Mixer:</strong> Next Thursday at 6:00 PM.</p>
+            </div>
+        </section>
+
+        <section id="spotlights">
+            <h2>Business Spotlights</h2>
+            <div class="spotlight-cards">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p>&copy; <span id="currentyear"></span> | Crash Rosquist | WDD 231 Project</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
