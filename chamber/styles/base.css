@@ -476,11 +476,17 @@ dialog {
     color: white;
 }
 
+.discover-grid h1 {
+  grid-area: title;
+  margin: 0;
+  text-align: center; 
+}
 
 .discover-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: 
+  grid-template-areas:
+    "title" 
     "sidebar"
     "gallery";
   gap: 20px;
@@ -502,6 +508,9 @@ dialog {
   grid-template-columns: 1fr; 
   gap: 20px;
 }
+
+
+
 
 
 
