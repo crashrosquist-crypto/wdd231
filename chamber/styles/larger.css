@@ -54,6 +54,49 @@
     padding: 0 1rem;
 }
 
+.discover-grid {
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: 
+      "sidebar gallery";
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+}
+
+.place-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+  .sidebar {
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        height: fit-content;
+    }
+
+ 
+  .place-card img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+
+
+@media screen and (min-width: 641px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
     
 }
 

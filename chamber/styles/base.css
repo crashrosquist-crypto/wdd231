@@ -476,3 +476,33 @@ dialog {
     color: white;
 }
 
+
+.discover-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "sidebar"
+    "gallery";
+  gap: 20px;
+  padding: 20px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #f0f0f0; 
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    height: fit-content;
+}
+
+.gallery {
+  grid-area: gallery;
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 20px;
+}
+
+
+
+

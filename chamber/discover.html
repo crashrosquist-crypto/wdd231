@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the beauty and attractions of Japan, curated by the Quist Chamber of Commerce.">
+    <meta name="author" content="Crash Rosquist">
+    <title>Discover | Quist Chamber Of Commerce</title>
+
+    <meta property="og:title" content="Discover Japan - Quist Chamber">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Explore local highlights, from Tokyo's digital art to Kyoto's historic shrines.">
+    <meta property="og:image" content="https://crashrosquist-crypto.github.io/wdd231/chamber/images/hero.jpg">
+    <meta property="og:url" content="https://crashrosquist-crypto.github.io/wdd231/chamber/discover.html">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="scripts/activities.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/cheese.svg" alt="Quist Chamber Logo">
+        <p>Quist Chamber Of Commerce</p>
+        <button id="nav-button" class="hamburger" aria-label="Toggle Navigation"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li class="active"><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="discover-grid">
+        <aside class="sidebar">
+            <section class="visitor-message">
+                <h2>Welcome</h2>
+                <p id="visit-msg"></p> </section>
+
+            <section class="stats">
+                <h2>Area Demographics</h2>
+                <p><strong>Population:</strong> 125 Million (Japan)</p>
+                <p><strong>Capital:</strong> Tokyo</p>
+                <p><strong>Currency:</strong> Japanese Yen (JPY)</p>
+            </section>
+        </aside>
+
+        <section id="places-container" class="gallery">
+            </section>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p>&copy; <span id="currentyear"></span> | Crash Rosquist | WDD 231 Project</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
