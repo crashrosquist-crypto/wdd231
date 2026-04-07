@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeHut | Home</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Discover trending anime, ratings, and details at AnimeHut.">
+    <meta name="author" content="Crash Rosquist">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/search.js" type="module"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/favicon.ico" alt="AnimeHut Logo">
+        </div>
+        <h1>AnimeHut</h1>
+
+        <button id="menu-button" aria-label="Toggle Menu">&#9776;</button>
+
+        <nav class="main-nav">
+            <ul id="nav-list">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="mylist.html">My List</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <form action="search.html" method="GET">
+                <input type="text" name="query" id="main-search-input" placeholder="Search anime..." required>
+                <button type="submit" id="search-button">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Filter Results</h3>
+            <div class="filter-group">
+                <label>Format</label>
+                <select id="filter-format">
+                    <option value="all">All</option>
+                    <option value="tv">TV Series</option>
+                    <option value="movie">Movie</option>
+                    <option value="ova">OVA</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Status</label>
+                <select id="filter-status">
+                    <option value="all">Any</option>
+                    <option value="airing">Currently Airing</option>
+                    <option value="complete">Finished</option>
+                </select>
+            </div>
+        </aside>
+        <main>
+            <section class="results-header">
+                <h1 id="results-title">Browse Anime</h1>
+                <p id="search-status">Enter a keyword to start searching...</p>
+            </section>
+
+            <div id="anime-results-grid" class="grid-container">
+            </div>
+
+            <dialog id="anime-details-modal">
+                <div id="modal-content">
+                </div>
+                <button id="close-modal" class="btn">Close</button>
+            </dialog>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2026 | AnimeHut | WDD 231 Final Project</p>
+        <p>Data provided by <a href="https://jikan.moe/">Jikan API</a></p>
+        <a href="YOUR_YOUTUBE_LINK_HERE" class="video-link">Project Video Demonstration</a>
+    </footer>
+<dialog id="anime-modal">
+        <div class="modal-content">
+            <button id="close-modal" aria-label="Close Modal">&times;</button>
+            <div id="modal-details">
+                </div>
+        </div>
+    </dialog>
+</body>
+
+</html>
