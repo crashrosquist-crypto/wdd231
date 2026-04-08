@@ -1,4 +1,4 @@
-import { fetchPrompt, renderTrendingSnippet } from "./getAnime.js";
+import { fetchPrompt, renderTrendingSnippet, initModalClosing, initHamburgerMenu } from "./getAnime.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const query = urlParams.get('query');
@@ -27,3 +27,15 @@ async function initSearchPage() {
 }
 
 initSearchPage();
+
+document.addEventListener("click", (e) => {
+    if (e.target.id === "close-modal" || e.target.closest("#close-modal")) {
+        const modal = document.querySelector("#anime-modal");
+        if (modal) {
+            modal.close();
+        }
+    }
+});
+
+initModalClosing();
+initHamburgerMenu();

@@ -45,11 +45,12 @@
     <div class="container">
         <aside class="sidebar">
             <h3>Filters</h3>
-            <ul>
-                <li>Action</li>
-                <li>Adventure</li>
-                <li>Sci-Fi</li>
-                <li>Fantasy</li>
+            <ul id="filter-list">
+                <li><button class="filter-btn" data-genre="Action">Action</button></li>
+                <li><button class="filter-btn" data-genre="Adventure">Adventure</button></li>
+                <li><button class="filter-btn" data-genre="Sci-Fi">Sci-Fi</button></li>
+                <li><button class="filter-btn" data-genre="Fantasy">Fantasy</button></li>
+                <li><button class="filter-btn" data-genre="all">Clear Filters</button></li>
             </ul>
         </aside>
 
@@ -60,6 +61,10 @@
                     <p>Loading featured anime...</p>
                 </div>
             </section>
+
+            <div class="section-banner">
+                <h2>Trending Anime</h2>
+            </div>
 
             <section class="anime-grid" id="anime-list">
             </section>

@@ -1,3 +1,5 @@
+import { initModalClosing, initHamburgerMenu } from "./getAnime.js";
+
 const listGrid = document.querySelector("#mylist-grid");
 const listCountLabel = document.querySelector("#list-count");
 const clearBtn = document.querySelector("#clear-list");
@@ -57,3 +59,15 @@ if (clearBtn) {
 }
 
 displayMyList();
+
+document.addEventListener("click", (e) => {
+    // Check if the clicked item is the close button OR the backdrop
+    if (e.target.id === "close-modal" || e.target.id === "anime-modal") {
+        const modal = document.querySelector("#anime-modal");
+        if (modal) {
+            modal.close();
+        }
+    }
+});
+initModalClosing();
+initHamburgerMenu();

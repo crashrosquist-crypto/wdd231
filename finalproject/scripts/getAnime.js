@@ -3,6 +3,12 @@ export function openModal(anime) {
     const details = document.querySelector("#modal-details");
     const closeBtn = document.querySelector("#close-modal");
 
+    if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+            modal.close();
+        });
+    }
+
     if (!modal || !details) return;
     details.innerHTML = `
         <h2>${anime.title}</h2>
@@ -26,13 +32,31 @@ export function saveToMyList(anime) {
     let myList = JSON.parse(localStorage.getItem('animeHutList')) || [];
     const exists = myList.find(item => item.mal_id === anime.mal_id);
 
+    const modal = document.querySelector("#anime-modal");
+    const details = document.querySelector("#modal-details");
+
     if (!exists) {
         myList.push(anime);
         localStorage.setItem('animeHutList', JSON.stringify(myList));
-        alert(`${anime.title} added to your list!`);
+        
+        details.innerHTML = `
+            <div style="text-align: center; padding: 1rem;">
+                <h2 style="color: var(--secondary-color); border: none; padding: 0;">Success!</h2>
+                <p><strong>${anime.title}</strong> has been added to your list.</p>
+                <button class="btn save-btn" style="margin-top: 20px; width: 100%; max-width: 200px;" onclick="document.querySelector('#anime-modal').close()">Got it!</button>
+            </div>
+        `;
     } else {
-        alert("This anime is already in your list.");
+        details.innerHTML = `
+            <div style="text-align: center; padding: 1rem;">
+                <h2 style="color: var(--primary-color); border: none; padding: 0;">Already Added</h2>
+                <p><strong>${anime.title}</strong> is already in your collection.</p>
+                <button class="btn detail-btn" style="margin-top: 20px; width: 100%; max-width: 200px;" onclick="document.querySelector('#anime-modal').close()">Close</button>
+            </div>
+        `;
     }
+    
+    modal.showModal();
 }
 
 export async function fetchPrompt(url) {
@@ -82,4 +106,26 @@ export function renderTrendingSnippet(animeList, container) {
 
         container.appendChild(card);
     });
+}
+
+export function initModalClosing() {
+    document.addEventListener("click", (e) => {
+        if (e.target.id === "close-modal" || e.target.id === "anime-modal") {
+            const modal = document.querySelector("#anime-modal");
+            if (modal) modal.close();
+        }
+    });
+}
+
+export function initHamburgerMenu() {
+    const menuButton = document.querySelector('#menu-button');
+    const navList = document.querySelector('#nav-list');
+
+    if (menuButton && navList) {
+        menuButton.addEventListener('click', () => {
+            navList.classList.toggle('open');
+            // Swaps between hamburger icon and "X"
+            menuButton.innerHTML = navList.classList.contains('open') ? '&times;' : '&#9776;';
+        });
+    }
 }
