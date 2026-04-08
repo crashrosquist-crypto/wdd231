@@ -23,6 +23,8 @@ async function initHomePage() {
     }
 }
 
+
+
 // RENDER HERO (Featured Anime)
 function renderHero(anime) {
     if (!heroContainer) return;
