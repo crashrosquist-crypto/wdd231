@@ -55,6 +55,13 @@ img {
     height: auto;
 }
 
+.filter-btn {
+    padding: 1rem;
+    display: block;
+    justify-content: space-around;
+    margin: 1rem;
+}
+
 #anime-list, #anime-results-grid, #mylist-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 280px));
@@ -214,6 +221,51 @@ img {
         flex-direction: row;
         padding: 0;
     }
+    .filter-list {
+        justify-content: center; /* Center them on desktop */
+        gap: 20px;
+    }
+    
+    .filter-list button {
+        flex: 0 1 auto; /* Don't force them to stretch on desktop */
+        min-width: 120px;
+    }
+    
+}
+
+
+#filter-list {
+    display: flex;
+    flex-wrap: wrap;       
+    list-style: none;      
+    padding: 0;
+    margin: 1rem 0;
+    gap: 8px;              
+}
+
+#filter-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.filter-btn {
+    display: inline-block !important; 
+    width: auto !important;          
+    padding: 6px 12px !important;    
+    margin: 0 !important;            
+    font-size: 0.85rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background-color: var(--white);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.filter-btn[data-genre="all"] {
+    background-color: var(--accent-color);
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 dialog {
