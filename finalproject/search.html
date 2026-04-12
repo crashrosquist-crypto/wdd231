@@ -8,6 +8,10 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <meta name="description" content="Discover trending anime, ratings, and details at AnimeHut.">
     <meta name="author" content="Crash Rosquist">
+    <meta property="og:title" content="AnimeHut | Search Your Favorite Anime">
+    <meta property="og:description" content="Search and discover trending anime, ratings, and details at AnimeHut.">
+    <meta property="og:image" content="https://crashrosquist-crypto.github.io/wdd231/finalproject/images/og-image.jpg"> <meta property="og:url" content="https://crashrosquist-crypto.github.io/wdd231/finalproject/search.html">
+    <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -30,8 +34,8 @@
 
         <nav class="main-nav">
             <ul id="nav-list">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="search.html">Search</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html" class="active">Search</a></li>
                 <li><a href="mylist.html">My List</a></li>
             </ul>
         </nav>
@@ -48,7 +52,7 @@
         <aside class="sidebar">
             <h3>Filter Results</h3>
             <div class="filter-group">
-                <label>Format</label>
+                <label for="filter-format">Format</label>
                 <select id="filter-format">
                     <option value="all">All</option>
                     <option value="tv">TV Series</option>
@@ -57,7 +61,7 @@
                 </select>
             </div>
             <div class="filter-group">
-                <label>Status</label>
+                <label for="filter-status">Status</label>
                 <select id="filter-status">
                     <option value="all">Any</option>
                     <option value="airing">Currently Airing</option>
@@ -67,7 +71,7 @@
         </aside>
         <main>
             <section class="results-header">
-                <h1 id="results-title">Browse Anime</h1>
+                <h2 id="results-title">Browse Anime</h2>
                 <p id="search-status">Enter a keyword to start searching...</p>
             </section>
 
