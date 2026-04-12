@@ -8,7 +8,11 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <meta name="description" content="Discover trending anime, ratings, and details at AnimeHut.">
     <meta name="author" content="Crash Rosquist">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta property="og:title" content="AnimeHut | Discover Your Next Favorite Series">
+    <meta property="og:description" content="Discover your next favorite series at AnimeHut. Explore trending titles, detailed ratings, and curated lists for every anime fan.">
+    <meta property="og:image" content="https://crashrosquist-crypto.github.io/wdd231/finalproject/images/og-image.jpg">
+    <meta property="og:url" content="https://crashrosquist-crypto.github.io/wdd231/finalproject/index.html">
+    <meta property="og:type" content="website">    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
@@ -44,7 +48,7 @@
 
     <div class="container">
         <aside class="sidebar">
-            <h3>Filters</h3>
+            <h2>Filters</h2>
             <ul id="filter-list">
                 <li><button class="filter-btn" data-genre="Action">Action</button></li>
                 <li><button class="filter-btn" data-genre="Adventure">Adventure</button></li>
@@ -56,7 +60,7 @@
 
         <main>
             <section class="hero">
-                <h2>Featured Anime of the Month</h2>
+                <h3>Featured Anime of the Month</h3>
                 <div id="hero-content">
                     <p>Loading featured anime...</p>
                 </div>
@@ -67,12 +71,14 @@
             </div>
 
             <section class="anime-grid" id="anime-list">
+                <h2>Reccomended Anime</h2>
             </section>
         </main>
     </div>
 
     <footer>
         <p>&copy; 2026 Anime Discovery Hub | Content via External API</p>
+        <a href="https://youtu.be/qPaWDbqFn7M" class="video-link">Project Video Demonstration</a>
     </footer>
 
     <dialog id="anime-modal">

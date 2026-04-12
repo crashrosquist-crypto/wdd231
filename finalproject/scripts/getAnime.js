@@ -58,7 +58,7 @@ export function saveToMyList(anime) {
     
     modal.showModal();
 }
-
+// My fetch function along with async/await
 export async function fetchPrompt(url) {
     try {
         const response = await fetch(url);
@@ -70,7 +70,7 @@ export async function fetchPrompt(url) {
         return null;
     }
 }
-
+// My dynamic Content and Template Literals 
 export function renderTrendingSnippet(animeList, container) {
     if (!container) return;
     container.innerHTML = "";

@@ -1,6 +1,6 @@
 import { fetchPrompt, renderTrendingSnippet, saveToMyList, openModal, initModalClosing } from "./getAnime.js";
 
-// GLOBAL STATE - This lets the filter buttons "see" the data
+// Helps me see the data
 let allAnimeData = []; 
 
 const menuButton = document.querySelector('#menu-button');
@@ -9,12 +9,12 @@ const heroContainer = document.querySelector("#hero-content");
 const trendingGrid = document.querySelector('#anime-list');
 const filterButtons = document.querySelectorAll(".filter-btn");
 
-// INITIALIZATION
+// Initializes the data
 async function initHomePage() {
     try {
         const response = await fetchPrompt('https://api.jikan.moe/v4/top/anime?limit=15');
         if (response && response.data) {
-            allAnimeData = response.data; // Store it globally for filters
+            allAnimeData = response.data; //here is where I store globally
             renderHero(allAnimeData[0]);
             renderTrendingSnippet(allAnimeData, trendingGrid); 
         }
@@ -29,12 +29,26 @@ async function initHomePage() {
 function renderHero(anime) {
     if (!heroContainer) return;
 
+    const genres = anime.genres ? anime.genres.map(g => g.name).slice(0, 3).join(', ') : 'N/A';
+    // Get the first studio name if it exists
+    const studio = anime.studios && anime.studios.length > 0 ? anime.studios[0].name : 'Unknown Studio';
+
     heroContainer.innerHTML = `
         <div class="hero-card">
             <img src="${anime.images.jpg.large_image_url}" alt="${anime.title}" loading="lazy">
             <div class="hero-info">
-                <h3>${anime.title}</h3>
-                <p>${anime.synopsis ? anime.synopsis.slice(0, 150) + '...' : 'No description available.'}</p>
+                <div class="hero-header-text">
+                    <h3>${anime.title}</h3>
+                    <div class="hero-meta">
+                        <span class="score">⭐ ${anime.score || 'N/A'}</span> | 
+                        <span>${anime.year || '2023'}</span> | 
+                        <span>${genres}</span>
+                    </div>
+                    <p class="studio-tag"><strong>Studio:</strong> ${studio}</p>
+                </div>
+
+                <p class="hero-description">${anime.synopsis ? anime.synopsis.slice(0, 450) + '...' : 'No description available.'}</p>
+                
                 <div class="card-buttons">
                     <button class="btn save-btn" id="hero-save">Add to List</button>
                     <button class="btn detail-btn" id="hero-details">View Details</button>
@@ -47,18 +61,18 @@ function renderHero(anime) {
     document.querySelector("#hero-details").addEventListener("click", () => openModal(anime));
 }
 
-// FILTER LOGIC (Array Methods Requirement)
+// array method arrow function
 filterButtons.forEach(button => {
     button.addEventListener("click", () => {
         const genre = button.getAttribute("data-genre");
         
-        // Use the .filter() method as required by the rubric
+        // here is my .filter() method
         const filteredAnime = allAnimeData.filter(anime => {
             if (genre === "all") return true;
             return anime.genres.some(g => g.name === genre);
         });
 
-        // Re-render the grid with the filtered list
+        // rerender with the list here
         renderTrendingSnippet(filteredAnime, trendingGrid); 
     });
 });

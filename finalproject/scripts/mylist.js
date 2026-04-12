@@ -1,11 +1,11 @@
-import { initModalClosing, initHamburgerMenu } from "./getAnime.js";
+import { initModalClosing, initHamburgerMenu, openModal } from "./getAnime.js";
 
 const listGrid = document.querySelector("#mylist-grid");
 const listCountLabel = document.querySelector("#list-count");
 const clearBtn = document.querySelector("#clear-list");
 
-function displayMyList() {
-    const savedAnime = JSON.parse(localStorage.getItem('animeHutList')) || [];
+function displayMyList() { 
+    const savedAnime = JSON.parse(localStorage.getItem('animeHutList')) || []; // local storage here
 
     if (listCountLabel) {
         listCountLabel.textContent = `You have ${savedAnime.length} items in your list.`;
@@ -36,6 +36,10 @@ function displayMyList() {
 
         card.querySelector('.remove-btn').addEventListener('click', () => {
             removeAnime(anime.mal_id);
+        });
+
+        card.querySelector('.detail-btn').addEventListener('click', () => {
+            openModal(anime);
         });
 
         listGrid.appendChild(card);
